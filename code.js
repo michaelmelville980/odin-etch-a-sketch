@@ -9,6 +9,7 @@ for (let rowNum = 1; rowNum <= MAX_ROWS; rowNum++){
     for (let colNum = 1; colNum <= MAX_COLS; colNum++){
         const newDiv = document.createElement("div");
         newDiv.setAttribute("id", rowNum + "," + colNum);
+        newDiv.setAttribute("class", "item");
         gridContainerRef.appendChild(newDiv);
     }
 }

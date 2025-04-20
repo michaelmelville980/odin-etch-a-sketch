@@ -1,0 +1,16 @@
+
+#grid-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 1px solid red;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+}
+
+.item{
+    border: 1px solid black;
+    flex: 1 1 calc(100% / 16);
+    box-sizing: border-box;
+}
