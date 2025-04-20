@@ -8,9 +8,7 @@ const MAX_COLS = 16;
 for (let rowNum = 1; rowNum <= MAX_ROWS; rowNum++){
     for (let colNum = 1; colNum <= MAX_COLS; colNum++){
         const newDiv = document.createElement("div");
-        newDiv.setAttribute("class", "row-" + rowNum);
         newDiv.setAttribute("id", rowNum + "," + colNum);
         gridContainerRef.appendChild(newDiv);
-        console.log("Row Num:" + rowNum + " Col Num:" + colNum);
     }
 }
