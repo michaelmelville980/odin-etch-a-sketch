@@ -17,6 +17,36 @@ const createGrid = function(gridSize){
     }
 }
 
+}
+
+
+
+
+// adding event listener that creates grid when user clicks button
+button.addEventListener("click", e => {
+
+    // deleting existing children
+    gridContainerRef.replaceChildren();
+
+    // resetting background color
+    gridContainerRef.style.backgroundColor = "";
+
+    // prompting for grid size
+    let gridSize = prompt("Enter the grid size (1-100)");
+    if (gridSize > 100){
+        gridSize = 100;
+    }
+
+    // creating new grid
+    createGrid(gridSize);
+
+    // updating CSS flex-basis
+    gridContainerRef.style.setProperty("--cols", gridSize);
+})
+
+
+
+
 // adding event listener that changes grid color when user hovers over item
 gridContainerRef.addEventListener("mouseover", e => {
 
